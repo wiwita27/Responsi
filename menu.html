@@ -1,0 +1,464 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Salad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #b6c28e;
+      }
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .navbar .logo i {
+        margin-right: 10px;
+      }
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar ul li {
+        margin: 0 15px;
+      }
+      .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 400;
+      }
+      .navbar ul li a:hover {
+        color: #ffffff;
+      }
+      .navbar .btn {
+        background-color: #ffffff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .navbar .btn:hover {
+        background-color: #e68a00;
+      }
+      .hero {
+        text-align: center;
+        color: #fff;
+        padding: 100px 20px;
+        position: relative;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .hero img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.5;
+      }
+      .hero h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+      .hero .breadcrumb {
+        margin-top: 10px;
+        color: #ff9900;
+      }
+      .content {
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .content h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .content .section-title {
+        color: #ff9900;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .content .items {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+      }
+      .content .item {
+        text-align: center;
+      }
+      .content .item i {
+        font-size: 36px;
+        color: #ff9900;
+      }
+      .content .item h3 {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      .content .item p {
+        font-size: 14px;
+        color: #666;
+      }
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          padding: 20px;
+        }
+        .navbar ul {
+          flex-direction: column;
+          align-items: center;
+        }
+        .navbar ul li {
+          margin: 10px 0;
+        }
+        .hero {
+          padding: 50px 20px;
+        }
+        .hero h1 {
+          font-size: 36px;
+        }
+        .content .items {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .menu-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      .menu-item {
+        flex: 1 1 calc(33.333% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+      .menu-item img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      .menu-item .details {
+        text-align: center;
+        margin-top: 10px;
+      }
+      .menu-item .details h4 {
+        margin: 0;
+        font-size: 18px;
+        color: #000;
+      }
+      .menu-item .details p {
+        margin: 5px 0 0;
+        color: #777;
+      }
+      .menu-item .price {
+        font-size: 18px;
+        color: #f39c12;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .scroll-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f39c12;
+        color: #fff;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .menu-item {
+          flex: 1 1 calc(50% - 20px);
+        }
+      }
+      @media (max-width: 480px) {
+        .menu-item {
+          flex: 1 1 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">Fresh Side</div>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Pesan</a></li>
+        <li><a href= #about> Tentang Kami </a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+      </ul>
+    </header>
+  <section class="hero bg-cover bg-center h-64 md:h-96" 
+    style="background-image: url('bg\ 1.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat;opacity: 0.7;">
+    <h1>Menu Salad</h1>
+  </section>
+
+    <div class="container">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <img alt="Image of Salad" height="150" src="caesar s.jpeg" width="150" />
+          <div class="details">
+            <h4>Caesar Salad</h4>
+            <p>Salad klasik dengan daun romaine renyah, crouton gurih, dan saus creamy khas Caesar.</p>
+          </div>
+          <div class="Harga">Rp 20.0000</div>
+        </div>
+        <div class="menu-item">
+          <img alt="Image of Salad" height="150" src="Caprese Salad.jpeg" width="150" />
+          <div class="details">
+            <h4>Caprese Salad</h4>
+            <p>Kombinasi segar tomat, mozzarella, basil, dan minyak zaitun yang autentik.</p>
+          </div>
+          <div class="Harga">Rp 25.000</div>
+        </div>
+        <div class="menu-item">
+          <img alt="Image of Salad" height="150" src="Garden Salad.jpeg" width="150" />
+          <div class="details">
+            <h4>Garden Salad</h4>
+            <p>Campuran sayuran segar dengan dressing vinaigrette ringan yang menyegarkan.</p>
+          </div>
+          <div class="Harga">Rp 20.000</div>
+        </div>
+        <div class="menu-item">
+          <img alt="Image of Chicken Burger" height="150" src="greek s.jpeg" width="150" />
+          <div class="details">
+            <h4>Greek Salad</h4>
+            <p>Salad Mediterania dengan keju feta, zaitun, dan potongan sayur segar.</p>
+          </div>
+          <div class="Harga">Rp 25.000</div>
+        </div>
+        <div class="menu-item">
+          <img alt="Image of Chicken Burger" height="150" src="Green Salad.jpeg" width="150" />
+          <div class="details">
+            <h4>Green Salad</h4>
+            <p>Campuran hijau segar dengan alpukat dan dressing lemon vinaigrette.</p>
+          </div>
+          <div class="Harga">Rp 30.000</div>
+        </div>
+        <div class="menu-item">
+          <img alt="Image of Chicken Burger" height="150" src="Salade Nicoise.jpeg" width="150" />
+          <div class="details">
+            <h4>Nicoise Salad</h4>
+            <p>Salad Prancis klasik dengan tuna, telur rebus, dan vinaigrette tajam.</p>
+          </div>
+          <div class="Harga">Rp 30.000</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-top">
+      <i class="fas fa-arrow-up"> </i>
+    </div>
+      </div>
+    </body>
+  </body>
+</html>
+
+
+<html>
+  <head>
+    <title>Footer Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+      }
+      .footer {
+        background-color: #b6c28e;
+        padding: 50px 0;
+        color: #ffffff;
+      }
+      .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .footer .container > div {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+      }
+      .footer h3 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .footer h3::after {
+        content: "";
+        width: 50px;
+        height: 2px;
+        background-color: #b6c28e;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+      .footer ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .footer ul li a:hover {
+        text-decoration: underline;
+      }
+      .footer .contact-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer .contact-info i {
+        margin-right: 10px;
+      }
+      .footer .contact-info div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .footer .social-icons {
+        display: flex;
+        margin-top: 20px;
+      }
+      .footer .social-icons a {
+        color: #ffffff;
+        margin-right: 10px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .footer .bottom-bar {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #b6c28e;
+        margin-top: 20px;
+      }
+      .footer .bottom-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .footer .bottom-bar a:hover {
+        text-decoration: underline;
+      }
+      .footer .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #ffffff;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+      }
+      .footer .back-to-top:hover {
+        background-color: #ffffff;
+      }
+      .footer .bottom-bar .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .footer .bottom-bar .links a {
+        margin: 0 10px;
+      }
+      @media (max-width: 768px) {
+        .footer .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer .container > div {
+          margin: 20px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer">
+      <div class="container">
+        <div>
+          <h3>Outlet</h3>
+          <ul>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Kontak Kami</a></li>
+            <li><a href="#">Pesan</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Syarat Ketentuan</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kontak</h3>
+          <div class="contact-info">
+            <div><i class="fas fa-map-marker-alt"></i> Jalan Pandanaran, Ngaglik, Daerah Istimewa Yogyakarta</div>
+            <div><i class="fas fa-phone-alt"></i> +62 827 070218</div>
+            <div><i class="fas fa-envelope"></i> fresh.side@gmail.com</div>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3>Buka</h3>
+          <div>Senin - Sabtu</div>
+          <div>09.00 WIB - 21.00 WIB</div>
+          <div>Minggu</div>
+          <div>10.00 WIB - 22.00 WIB</div>
+        </div>
+      <div class="bottom-bar">
+        <div>© Fresh Side, All Right Reserved.</div>
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">Cookies</a>
+          <a href="#">Help</a>
+          <a href="#">FAQs</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

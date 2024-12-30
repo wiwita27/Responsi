@@ -1,0 +1,433 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Formulir Pemesanan Salad</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function updateSaladImage() {
+        const saladType = document.getElementById("salad-type").value;
+        const saladImage = document.getElementById("salad-image");
+        let imageUrl = "";
+        let altText = "";
+
+        switch (saladType) {
+          case "caesar":
+            imageUrl = "caesar s.jpeg";
+            altText = "A placeholder image of a Caesar salad with romaine lettuce, croutons, and Caesar dressing";
+            break;
+          case "greek":
+            imageUrl = "greek s.jpeg";
+            altText = "A placeholder image of a Greek salad with tomatoes, cucumbers, olives, and feta cheese";
+            break;
+          case "garden":
+            imageUrl = "Garden Salad.jpeg";
+            altText = "A placeholder image of a garden salad with mixed greens, tomatoes, cucumbers, and carrots";
+            break;
+          case "caprese":
+            imageUrl = "Caprese Salad.jpeg";
+            altText = "A placeholder image of a fruit salad with mixed fresh fruits like strawberries, blueberries, and kiwi";
+            break;
+            case "nicoise":
+            imageUrl = "Salade Nicoise.jpeg";
+            altText = "A placeholder image of a fruit salad with mixed fresh fruits like strawberries, blueberries, and kiwi";
+            break;
+            case "green":
+            imageUrl = "Green Salad.jpeg";
+            altText = "A placeholder image of a fruit salad with mixed fresh fruits like strawberries, blueberries, and kiwi";
+            break;
+          default:
+            imageUrl = "caesar s.jpeg";
+            altText = "A placeholder image of a salad with various fresh vegetables and ingredients";
+        }
+
+        saladImage.src = imageUrl;
+        saladImage.alt = altText;
+      }
+    </script>
+<html>
+  <head>
+    <title>Footer Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #b6c28e;
+        color: #ffffff;
+      }
+      /*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    font-size: 15px;
+    color: var(--light) !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.navbar-dark .navbar-brand img {
+    max-height: 60px;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-brand img {
+    max-height: 45px;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+    }
+
+    .navbar-dark .navbar-collapse {
+        margin-top: 15px;
+        border-top: 1px solid rgba(255, 255, 255, .1)
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        margin-left: 0;
+    }
+
+    .navbar-dark .navbar-brand img {
+        max-height: 45px;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-dark {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: transparent !important;
+    }
+    
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: var(--dark) !important;
+    }
+}
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background: transparent;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #b6c28e;
+      }
+      .navbar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 500;
+      }
+      .navbar a:hover {
+        color: #E0E5B6;
+      }
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+      }
+      .navbar .logo i {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      .navbar .logo span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      .navbar .book-table {
+        background: #E0E5B6;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #ffffff;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+      .navbar .book-table:hover {
+        background: #E0E5B6;
+      }
+      .footer {
+        background-color: #b6c28e;
+        padding: 50px 0;
+        color: #ffffff;
+      }
+      .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .footer .container > div {
+        flex: 1;
+        min-width: 200px;
+        margin: 10px;
+      }
+      .footer h3 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .footer h3::after {
+        content: "";
+        width: 50px;
+        height: 2px;
+        background-color: #b6c28e;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+      .footer ul li a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .footer ul li a:hover {
+        text-decoration: underline;
+      }
+      .footer .contact-info {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer .contact-info i {
+        margin-right: 10px;
+      }
+      .footer .contact-info div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .footer .social-icons {
+        display: flex;
+        margin-top: 20px;
+      }
+      .footer .social-icons a {
+        color: #ffffff;
+        margin-right: 10px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .footer .bottom-bar {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #b6c28e;
+        margin-top: 20px;
+      }
+      .footer .bottom-bar a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .footer .bottom-bar a:hover {
+        text-decoration: underline;
+      }
+      .footer .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #b6c28e;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+      }
+      .footer .back-to-top:hover {
+        background-color: #b6c28e;
+      }
+      .footer .bottom-bar .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .footer .bottom-bar .links a {
+        margin: 0 10px;
+      }
+      @media (max-width: 768px) {
+        .footer .container {
+          flex-direction: column;
+          align-items: center;
+        }
+        .footer .container > div {
+          margin: 20px 0;
+        }
+      }  
+    </style>
+</head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <i class="fas fa-lettuce"></i>
+        <span> Fresh.Side </span>
+      </div>
+    <div class="nav-links">
+      <a href="index.html"> Beranda </a>
+      <a href= #layanan> Layanan </a>
+      <a href="menu.html"> Menu </a>
+      <a href="order.html"> Pesan </a>
+      <a href= #about> Tentang Kami </a>
+      <a href="lokasi.html"> Lokasi </a>
+    </div>
+  </div>
+  </div>
+</div>
+<div class ="bg-gray-100">
+  <div class="container mx-auto mt-12 p-8 bg-white shadow-md rounded-lg">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Formulir Pemesanan Salad</h1>
+    <form id="formulir-fs">
+      <div class="mb-4">
+        <label class="block text-gray-700" for="name"> Nama </label>
+        <input class="w-full px-3 py-2 border rounded-lg text-black" id="name" name="Nama" placeholder="Nama Pelanggan" type="text"  oninput="changeTextColor(this)"
+        />/>
+      </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="phone"> Nomor Telpon </label>
+          <input class="w-full px-3 py-2 border rounded-lg text-black" id="phone" name="Nomor" placeholder="Nomor Telpon Pelanggan" type="tel" />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="salad-type"> Jenis Salad </label>
+          <select class="w-full px-3 py-2 border rounded-lg text-black" id="salad-type" name="JenisSalad" onchange="updateSaladImage()">
+            <option value="caesar">Caesar Salad</option>
+            <option value="greek">Greek Salad</option>
+            <option value="garden">Garden Salad</option>
+            <option value="nicoise">Nicoise Salad</option>
+            <option value="caprese">Caprese Salad</option>
+            <option value="green">Green Salas</option>
+          </select>
+        </div>
+        <div class="mb-6 flex justify-center">
+          <img
+            alt="A placeholder image of a salad with various fresh vegetables and ingredients"
+            class="h-auto rounded-lg mt-2"
+            height="200"
+            id="salad-image"
+            src="caesar s.jpeg"
+            width="300"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="ingredients"> Catatan Tambahan </label>
+          <textarea class="w-full px-3 py-2 border rounded-lg text-black" id="ingredients" name="CatatanTambahan" placeholder="Tambahkan Catatan Tambahan Anda"></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="quantity"> Jumlah </label>
+          <input class="w-full px-3 py-2 border rounded-lg text-black" id="quantity" name="Jumlah" placeholder="Jumlah Salad" type="number" />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="delivery-date"> Waktu Pengantaran </label>
+          <input class="w-full px-3 py-2 border rounded-lg text-black" id="delivery-date" name="TanggalPengantaran" type="date" />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="delivery-time"> Tanggal Pengiriman </label>
+          <input class="w-full px-3 py-2 border rounded-lg text-black" id="delivery-time" name="WaktuPengantaran" type="time" />
+        
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="address"> Alamat Pengantaran </label>
+          <textarea class="w-full px-3 py-2 border rounded-lg text-black" id="address" name="address" placeholder="Alamat Pengantaran Pelanggan"></textarea>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700" for="payment-method"> Metode Pembayaran </label>
+          <select class="w-full px-3 py-2 border rounded-lg text-black" id="payment-method" name="MetodePembayaran">
+            <option value="credit-card">Saat ini hanya tersedia COD</option>
+          </select>
+        </div>
+        <button class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600" type="submit">Pesan Sekarang</button>
+      </form>
+    </div>
+    <script>
+      // Fungsi untuk mengubah warna teks menjadi hitam
+      function changeTextColor(element) {
+        if (element.value.trim() !== "") {
+          element.classList.remove("text-gray-500");
+          element.classList.add("text-black");
+        } else {
+          element.classList.remove("text-black");
+          element.classList.add("text-gray-500");
+        }
+      }
+    </script>
+  </body>
+</html>
+</style>
+</head>
+<body>
+  <div class="footer">
+    <div class="container">
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Reservation</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <div class="contact-info">
+          <div><i class="fas fa-map-marker-alt"></i> Jalan Pandanaran, Ngaglik, Daerah Istimewa Yogyakarta</div>
+          <div><i class="fas fa-phone-alt"></i> +62 827 070218</div>
+          <div><i class="fas fa-envelope"></i> fresh.side@gmail.com</div>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3>Buka</h3>
+        <div>Senin - Sabtu</div>
+        <div>09.00 WIB - 21.00 WIB</div>
+        <div>Minggu</div>
+        <div>10.00 WIB - 22.00 WIB</div>
+      </div>
+    <div class="bottom-bar">
+      <div>© Fresh Side, All Right Reserved.</div>
+      <div class="links">
+        <a href="#">Home</a>
+        <a href="#">Cookies</a>
+        <a href="#">Help</a>
+        <a href="#">FAQs</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
